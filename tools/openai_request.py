@@ -1,17 +1,18 @@
 import json
 import os
-import asyncio
-import random
-
-import requests
+import configparser
 from openai import AsyncOpenAI
 
+config = configparser.ConfigParser()
+config.read('config.ini')
+api_key = config['KEYS']['openai_key']
+
 client = AsyncOpenAI(
-    api_key=os.environ.get("OPENAI_KEY"),
+    api_key=api_key
 )
 
 
-async def call_openai(stadt, wetter, random_template):
+async def call_openai(location, wetter, random_template):
     sys_prompt = ("Du bist ein Meme-Ideengenerator. Du verwendest die Memegen-API, um ein Meme zu erstellen, "
                   "das auf humorvolle Weise das Wetter darstellt. Generiere eine Meme-Idee basierend auf einer "
                   "zufälligen Vorlage und verschiedenen Wetterbedingungen wie Sonne, Regen, Schnee oder Hitze. Das "
@@ -19,7 +20,7 @@ async def call_openai(stadt, wetter, random_template):
                   "entstehen, darstellen. Verwende dafür nur die bereitgestellte Vorlage. Bitte auch alles auf "
                   "Deutsch! Außerdem bitte auch keine Sonderzeichen, wie Ö,Ä,Ü, sondern ersetz sie mit oe, ae, ue "
                   "Außerdem bitte ersetz alle Leerzeichen mit einem Unterstrich")
-    user_prompt = f"Stadt: {stadt} \n\n Wetter: {wetter} \n\n Template: {random_template['name']} \n"
+    user_prompt = f"Stadt: {location} \n\n Wetter: {wetter} \n\n Template: {random_template['name']} \n"
 
     try:
         response = await client.chat.completions.create(
@@ -54,6 +55,6 @@ async def call_openai(stadt, wetter, random_template):
     gpt_args = json.loads(response.choices[0].message.function_call.arguments)
     print('gptArgs: ', gpt_args)
 
-    return f"https://api.memegen.link/images/{random_template['id']}/{gpt_args['text0']}/{gpt_args['text1']}.png".replace(" ", "_")
+    return f"https://api.memegen.link/images/{random_template['id']}/{gpt_args['text0']}/{gpt_args['text1']}/{random_template['id']}.png".replace(" ", "_")
 
 

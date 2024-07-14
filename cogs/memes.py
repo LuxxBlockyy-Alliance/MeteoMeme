@@ -13,4 +13,4 @@ class Memes(commands.Cog):
         data = await open_meteo_request.get_all_weather_data(lat, lon)
         template = await meme_template.get_template()
         image_url = await openai_request.call_openai(location, data, template)
-        ctx.respond(file=image_url)
+        ctx.respond("hehe", file=image_url)
