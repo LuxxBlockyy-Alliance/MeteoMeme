@@ -1,4 +1,3 @@
-import asyncio
 from open_meteo import OpenMeteo
 from open_meteo.models import HourlyParameters
 

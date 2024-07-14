@@ -1,0 +1,7 @@
+requests
+aiohttp
+configparser
+openai
+ezcord
+py-cord
+open-meteo

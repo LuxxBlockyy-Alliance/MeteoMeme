@@ -1,19 +1,17 @@
-import requests
+from open_meteo import OpenMeteo
 
 
 async def get_coordinates(location):
-    url = f"https://nominatim.openstreetmap.org/search?q={location}&format=json&addressdetails=1&limit=1&polygon_svg=1"
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-
+    async with OpenMeteo() as open_meteo:
+        search = await open_meteo.geocoding(
+            name=location,
+        )
+        data = search.to_dict()
         if data:
-            lat = float(data[0]["lat"])
-            lon = float(data[0]["lon"])
+            results = data['results'][0]
+            lat = float(results['latitude'])
+            lon = float(results['longitude'])
             return [lat, lon]
         else:
-            return None
-    except requests.exceptions.RequestException as e:
-        print(f"Fehler: {e}")
-        return None
+            raise Exception(f"No data for {location} found!")
+
