@@ -74,4 +74,3 @@ Tritt unserem Test-Discord-Server bei, um den Bot in Aktion zu sehen und ihn aus
 Wir hoffen, dass dir unser Bot genauso viel Spaß macht wie uns bei der Entwicklung! Bei Fragen oder Feedback, tritt unserem [Discord Server](https://discord.gg/RXxgxveERY) bei.
 
 Viel Spaß beim Memes generieren! 🎉
-```
