@@ -14,7 +14,6 @@ Für den Mini Hackathon von Kevin Chromik haben wir uns entschieden, etwas Auße
 ## Beispiel
 
 ![MeteoMeme Beispiel 1](https://api.memegen.link/images/sad-boehner/Wenn_das_Gewitter_deine_Grillparty_ruiniert/Bielefeld,_23_Grad.png)
-![MeteoMeme Beispiel 1](https://media.discordapp.net/attachments/1262423635746881647/1262445308109918278/image.png?ex=66969f50&is=66954dd0&hm=4aaf3a5903ed77c1237c2e8f800fd15e4fa092fa0a68bc5b841f193ebbff3600&=&format=webp&quality=lossless)
 
 ## Installation und Einrichtung
 
