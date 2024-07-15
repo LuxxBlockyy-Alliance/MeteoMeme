@@ -16,7 +16,14 @@ class Memes(commands.Cog):
                               colour=discord.Color.blue())
         interaction = await ctx.respond(embed=embed)
         await interaction.edit(embed=embed)
-        lat, lon = await get_lat_lon.get_coordinates(location)
+        try:
+            lat, lon = await get_lat_lon.get_coordinates(location)
+        except:
+            embed = discord.Embed(title="Tja, ein Fehler",
+                                  description="Hast du versucht mehr, als nur ein Wort zu nutzen?",
+                                  colour=discord.Color.red())
+            await interaction.edit(embed=embed)
+            return
         await asyncio.sleep(1.5)
         embed = discord.Embed(title="Wetter Meme wird generiert...",
                               description="🔗 Open Meteo API wird abgefragt... 🔗",
