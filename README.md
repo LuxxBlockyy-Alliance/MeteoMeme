@@ -4,7 +4,7 @@ Willkommen zu **MeteoMeme** - dem lustigen Discord-Bot, der das aktuelle Wetter 
 
 ## Übersicht
 
-Für den Mini Hackathon von Kevin Chromik haben wir uns entschieden, etwas Außergewöhnliches zu entwickeln. Statt einer traditionellen Wetter-App haben wir einen Discord-Bot programmiert, der mithilfe der OpenMeteo API und GPT-4 Turbo Wetterinformationen sammelt und diese in Form eines Memes darstellt. Dies wird durch den apimeme.com Endpoint ermöglicht. So wird das Wetter auf eine humorvolle Weise präsentiert!
+Für den Mini Hackathon von Kevin Chromik haben wir uns entschieden, etwas Außergewöhnliches zu entwickeln. Statt einer traditionellen Wetter-App haben wir einen Discord-Bot programmiert, der mithilfe der OpenMeteo API und GPT-4 Turbo Wetterinformationen sammelt und diese in Form eines Memes darstellt. Dies wird durch den api.memegen.link Endpoint ermöglicht. So wird das Wetter auf eine humorvolle Weise präsentiert!
 
 ## Funktionen
 
