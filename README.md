@@ -56,10 +56,6 @@ Für den Mini Hackathon von Kevin Chromik haben wir uns entschieden, etwas Auße
    python app.py
    ```
 
-## Bot zu deinem Discord-Server hinzufügen
-
-Klicke auf den folgenden Link, um den Bot zu deinem Server hinzuzufügen: [MeteoMeme zu deinem Server hinzufügen](https://discord.com/oauth2/authorize?client_id=1262437648304443412)
-
 ## Testen
 
 Tritt unserem Test-Discord-Server bei, um den Bot in Aktion zu sehen und ihn auszuprobieren: [MeteoMeme Test Server](https://discord.gg/RXxgxveERY)
