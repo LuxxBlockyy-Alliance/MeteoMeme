@@ -56,10 +56,6 @@ Für den Mini Hackathon von Kevin Chromik haben wir uns entschieden, etwas Auße
    python app.py
    ```
 
-## Testen
-
-Tritt unserem Test-Discord-Server bei, um den Bot in Aktion zu sehen und ihn auszuprobieren: [MeteoMeme Test Server](https://discord.gg/RXxgxveERY)
-
 ## Beitragende
 
 - **Janosch | blockyy**
